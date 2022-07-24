@@ -1,0 +1,88 @@
+﻿body {
+    background-color:lightblue;
+}
+
+ul {
+    /*background-image: url('Images/background.jpg');*/
+    padding: 0;
+    background-color: #147489;
+}
+
+li {
+    
+    list-style: none;
+    display: inline-block;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    padding: 15px;
+}
+.master {
+position:relative;
+padding:15px;
+color:white;
+float:right;
+}
+li:hover, a hover {
+    color: white;
+    background-color:#95b5ec;
+}
+
+ul li ul {
+    position: absolute;
+    display: none;
+}
+
+ul li:hover ul {
+    display: block;
+
+}
+li a{
+    display:inline-block;
+}
+
+ul li ul li {
+    display: block;
+}
+
+ul li ul li a {
+    width:150px;
+}
+
+form {
+    margin: 0px 10px;
+}
+
+h2 {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.container {
+    max-width: 360px;
+}
+
+.divider {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+    .divider hr {
+        margin: 7px 0px;
+        width: 35%;
+    }
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+    left:-15px;
+    padding: 0 0 0 0;
+}
+

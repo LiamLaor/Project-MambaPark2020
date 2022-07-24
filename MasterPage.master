@@ -1,0 +1,75 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+    <link href="StyleSheet.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+
+    </asp:ContentPlaceHolder>
+</head>
+<body style="background-color:lightblue">
+    
+    
+<style>
+    /*.inner-li:hover{
+        background-color:lightblue
+    }*/
+    li ul li:hover a{
+        background-color:lavender
+    }
+</style>
+    
+
+    <div>
+        <ul>
+            <li><a href="Home.aspx">Home</a></li>
+            <li><a href='Facilities.aspx'> Our Attractions</a></li>
+            <li><a href="contact_us.aspx">Contact Us</a></li>
+
+          <li <%--style="float: right"--%> class="master"> Sign In
+              <ul>
+                  <li <%--class="inner-li"--%> style="margin-left:0;display:block;position:absolute;background-color:#95b5ec;" class="right"><%=register_href %></li>
+
+                  <li <%--class="inner-li"--%> style="margin-left:0;top:40px;display:block;position:absolute;background-color:#95b5ec" class="right"><%=login_href %></li>
+              </ul>
+          </li>
+               
+
+              <li class="right"><%=logout%></li>
+        </ul>
+        
+ </div>          
+
+    <div style="text-align: left; display:inline-block;vertical-align:top">
+    <h1 ><%=name %></h1>
+    </div>
+
+    <%if (Session["user"]!=null)
+        { %>
+    <div style="width:200px;display:inline-block;vertical-align:central;position:center; margin-left:auto; margin-right: auto; padding-right:500px">
+        <img src="Images/2861593325_ba15be88-d08a-4cae-b1d2-1944061de5fc.png" style="display:block;margin-left:auto;margin-right:auto ;width:120px;height:80px"/>
+    </div>
+    <%} %>
+
+    <%else { %>
+        <div style="width:200px;display:inline-block;vertical-align:top; margin-left:auto; margin-right: auto;">
+            <img src="Images/2861593325_ba15be88-d08a-4cae-b1d2-1944061de5fc.png"  style="display:block;margin-left:auto;margin-right:auto ;width:120px;height:80px"/>
+    </div>
+    <%} %>
+
+   
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+       
+    </div>
+         
+
+        
+</body>
+</html>
